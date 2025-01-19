@@ -1,0 +1,258 @@
+/* Section styling with background image */
+.content2 {
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw; 
+    background-image: url('src/assets/io.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    overflow: hidden; 
+    text-align: center; 
+}
+
+/* Add a darker overlay to the background */
+.content2::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+
+/* Styling for text content */
+.contentx {
+    position: relative; 
+    z-index: 1; 
+    color: #ffffff; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
+    max-width: 80%; 
+    padding: 20px; 
+    animation: fadeIn 1.5s ease; 
+}
+
+/* Heading styling */
+.contentx h1 {
+    font-size: 4rem; 
+    margin-bottom: 20px; 
+    font-weight:bold; 
+    letter-spacing: 1px; 
+    animation: slideDown 1.5s ease; 
+}
+
+/* Paragraph styling */
+.contentx p {
+    font-size: 1.5rem; 
+    line-height: 1.8; 
+    margin: 40px auto 0 auto; 
+    animation: fadeIn 2s ease; 
+    max-width: 80%; 
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contentx h1 {
+        font-size: 2rem; 
+    }
+
+    .contentx p {
+        font-size: 1.2rem; 
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+    /* Section styling */
+.recipes {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.recipes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0056b3;
+    text-transform: uppercase;
+}
+
+.recipes p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Grid layout */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-item {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe-item span {
+    display: block;
+    padding: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-grid {
+        grid-template-columns: 1fr; 
+    }
+
+
+
+
+
+
+
+    
+
+
+/* Services Section */
+.services-section {
+    
+    padding: 50px 100px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Heading styling */
+  .services-section h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a; 
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the list of services */
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Styling each service card */
+  .service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px); 
+  }
+  
+  /* Styling the image inside the card */
+  .service-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling the description text */
+  .service-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  /* Change color of title on hover */
+  .service-card:hover h3 {
+    color: #00b3ff;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .services-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .service-card {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+}
+  
+  
+  
+  

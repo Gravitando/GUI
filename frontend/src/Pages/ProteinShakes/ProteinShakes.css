@@ -1,0 +1,131 @@
+/* ProteinShakes.css */
+
+/* Main container */
+.protein-shake-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20vh;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #363636;
+  margin-bottom: 20px;
+}
+
+/* Image styling */
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.shake-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Description styling */
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Content section */
+.content-section {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Ingredients list */
+.ingredients {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients h2 {
+  color: #363636;
+}
+
+.ingredients ul {
+  list-style: disc inside;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.ingredients li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+/* Nutrition facts */
+.nutrition-facts {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-facts h2 {
+  color: #363636;
+}
+
+.nutrition-facts p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Cooking instructions */
+.cooking-instructions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cooking-instructions h2 {
+  color: #363636;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-section {
+    grid-template-columns: 1fr;
+  }
+
+  .video-container iframe {
+    height: 300px;
+  }
+}

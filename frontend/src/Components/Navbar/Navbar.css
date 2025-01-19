@@ -1,0 +1,117 @@
+/* General navbar styles */
+.navbar {
+  background: #ffffff; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  padding: 10px 0px; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
+  height: 60px; 
+}
+
+/* Center content inside the navbar */
+.navbar-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  max-width: 1400px; 
+  margin: 0 auto; 
+  height: 100%; 
+}
+
+/* Logo styling */
+.navbar-logo {
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  height: 100%; 
+}
+
+.navbar-logo img {
+  width: auto; 
+  height: 70px; 
+  cursor: pointer; 
+  padding: 0; 
+  object-fit: contain; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05); 
+}
+
+/* Navigation menu styles */
+.navbar-menu {
+  display: flex;
+  gap: 20px; 
+}
+
+.navbar-item {
+  color: #000000; 
+  text-decoration: none; 
+  font-size: 16px; 
+  font-weight: 600; 
+  padding: 8px 15px; 
+  position: relative; 
+  transition: color 0.3s ease, background-color 0.3s ease; 
+  border-radius: 5px; 
+}
+
+.navbar-item:hover {
+  color: #006db3; 
+  background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-item.active {
+  color: #00b3ff; 
+  font-weight: 700; 
+}
+
+/* Hover and underline animation */
+.navbar-item::after {
+  content: ""; 
+  position: absolute;
+  left: 50%; 
+  bottom: 0; 
+  width: 0; 
+  height: 3px; 
+  background-color: #00b3ff; 
+  transition: all 0.4s ease; 
+  transform: translateX(-50%); 
+}
+
+.navbar-item:hover::after {
+  width: 100%; 
+  left: 0; 
+  transform: none; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap; 
+    max-width: 100%; 
+    padding: 10px;
+  }
+
+  .navbar-menu {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-logo img {
+    height: 40px; 
+  }
+
+  .navbar-item {
+    font-size: 14px; 
+    padding: 8px 15px;
+  }
+}
