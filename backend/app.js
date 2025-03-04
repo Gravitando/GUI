@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 app.use (cors());
 const UserModel = require('./models/User');
+const WorkoutSchedule = require('./models/WorkoutShedule.js');
 
 
 mongoose.connect("mongodb://127.0.0.1:27017/user");
@@ -39,6 +40,37 @@ app.post('/register', (req,res)=>{
     .then (users =>res.json(users))
     .catch (err=> res.json(err))
 })
+
+app.get("/workouts", async (req, res) => {
+    try {
+        const workouts = await WorkoutSchedule.find();
+        res.json(workouts);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.post("/workouts", async (req, res) => {
+    const { workoutType, date, startTime, duration } = req.body;
+    
+    if (!workoutType || !date || !startTime || !duration) {
+        return res.status(400).json({ message: "All fields are required" });
+    }
+    
+    
+    
+    try {
+        WorkoutSchedule.create({
+            workoutType,
+            date,
+            startTime,
+            duration
+        });
+        res.status(201).json();
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
 app.listen(3001,()=>  {
     console.log("server is running");
