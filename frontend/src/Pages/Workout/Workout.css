@@ -289,31 +289,32 @@
   background-color: #f8f9fa; /* Light background */
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 /* Title Styling */
 .workout-plan-generator h2 {
   font-size: 24px;
   color: #333;
+  text-align: center;
   margin-bottom: 15px;
 }
 
 /* Settings Box */
 .settings-box {
-  padding: 15px;
+  padding: 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Label Styling */
+/* Label Styling - Aligned Left */
 .settings-box label {
   display: block;
   font-size: 16px;
   font-weight: 500;
   color: #444;
-  margin: 10px 0 5px;
+  margin-bottom: 5px;
+  text-align: left; /* Align text to the left */
 }
 
 /* Input and Select Styling */
@@ -341,6 +342,33 @@
   margin-bottom: 15px;
 }
 
+/* Improved Submit Button */
+.settings-box button {
+  width: 20%; /* Reduce button width */
+  display: block;
+  margin: 10px auto; /* Center the button */
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #03bbe9; /* Primary color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.settings-box button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+.settings-box button:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .workout-plan-generator {
@@ -348,3 +376,88 @@
   }
 }
 
+/* Table Container */
+.workout-table-container {
+  margin: 40px auto;
+  width: 80%;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Table Header */
+.workout-table th {
+  background-color: #06cde7; /* Adjusted color */
+  color: white;
+  font-weight: bold;
+  padding: 14px;
+  text-transform: uppercase;
+  border: 1px solid #ddd;
+}
+
+/* Table Rows */
+.workout-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center; /* Centering content */
+  vertical-align: middle;
+}
+
+/* Alternating Row Colors */
+.workout-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Delete Button */
+.delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none; /* Keep default look */
+  cursor: pointer;
+  padding: 5px;
+  width: 100%; /* Ensures horizontal centering */
+}
+
+/* Trash Icon - Default Look */
+.trash-icon {
+  font-size: 20px;
+  color: black; /* Default color */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.delete-btn:hover .trash-icon {
+  color: red; /* Change color on hover */
+  transform: scale(1.2);
+}
+
+/* Responsive Table for Small Screens */
+@media (max-width: 768px) {
+  .workout-table-container {
+    width: 95%;
+  }
+
+  .workout-table th,
+  .workout-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .trash-icon {
+    font-size: 18px;
+  }
+}

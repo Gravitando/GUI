@@ -72,6 +72,18 @@ app.post("/workouts", async (req, res) => {
     }
 });
 
+app.delete("/workouts/:id", async (req, res) => {
+    try {
+        const deletedWorkout = await WorkoutSchedule.findByIdAndDelete(req.params.id);
+        if (!deletedWorkout) {
+            return res.status(404).json({ message: "Workout not found" });
+        }
+        res.json({ message: "Workout deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 app.listen(3001,()=>  {
     console.log("server is running");
 })

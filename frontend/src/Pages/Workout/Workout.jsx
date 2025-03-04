@@ -1,11 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Workout.css';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { FaTrash } from "react-icons/fa";
 
 
 function Workout() {
   const [workoutPlan, setWorkoutPlan] = useState({workoutType:"strength", date:"", startTime:"", duration:0});
+  const [workouts, setWorkouts] = useState([]);
 
   const handleWorkoutPlanChange = (e) => {
     const plan = {...workoutPlan}
@@ -14,14 +16,32 @@ function Workout() {
 
   }
 
+  const fetchWorkouts = async () => {
+    const res = await axios.get("http://localhost:3001/workouts");
+    setWorkouts(res.data);
+  }
+
+  useEffect(() => {
+    fetchWorkouts()
+  },[])
+  
+
   const onWorkoutSubmit = async () => {
     const res = await axios.post("http://localhost:3001/workouts", workoutPlan)
     if (res.status === 201) {
-      alert("Workout Plan Created Successfully");
+      fetchWorkouts();
     } else {
       alert("Failed to create Workout Plan");
     }
   }
+  const onWorkoutDelete = async (id) => {
+    const res = await axios.delete(`http://localhost:3001/workouts/${id}`);
+    if (res.status === 200) {
+      fetchWorkouts();
+    } else {
+      alert("Failed to delete Workout Plan");
+  }
+}
 
   return (
 
@@ -162,11 +182,11 @@ function Workout() {
     {/* Workout Type Dropdown */}
     <label htmlFor="workout-type">Workout Type:</label>
     <select id="workout-type" name='workoutType' onChange={handleWorkoutPlanChange}>
-      <option value="strength">Strength</option>
-      <option value="cardio">Cardio</option>
-      <option value="yoga">Yoga</option>
-      <option value="hiit">HIIT</option>
-      <option value="flexibility">Flexibility</option>
+      <option value="Abs Workout">Abs Workout</option>
+      <option value="Chest Workout">Chest Workout</option>
+      <option value="Shoulder Workout">Shoulder Workout</option>
+      <option value="Leg Workouts">Leg Workouts</option>
+      <option value="Bicep Workout">Bicep Workout</option>
     </select>
 
     {/* Date Input */}
@@ -180,12 +200,40 @@ function Workout() {
     {/* Duration Input */}
     <label htmlFor="workout-duration">Time Duration (minutes):</label>
     <input type="number" id="workout-duration" placeholder="Enter duration in minutes" name="duration" onChange={handleWorkoutPlanChange}/>
-    <button onClick={() => onWorkoutSubmit()}>Submit</button>
+    <button onClick={() => onWorkoutSubmit()}>Add</button>
   </div>
 </div>
 
 
-      
+<div className="workout-table-container">
+  <h2>Scheduled Workout Plans</h2>
+  <table className="workout-table">
+    <thead>
+      <tr>
+        <th>Workout Type</th>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>Duration (mins)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {workouts.map((workout) => (
+        <tr key={workout._id}>
+          <td>{workout.workoutType}</td>
+          <td>{workout.date}</td>
+          <td>{workout.startTime}</td>
+          <td>{workout.duration}</td>
+          <td>
+            <button className="delete-btn" onClick={() => onWorkoutDelete(workout._id)}>
+              <FaTrash className="trash-icon" />
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
       
       
       
