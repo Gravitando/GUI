@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { validateSignup } from "../../Validation/SignupValidation";
 import "./SignUp.css";
-
+import backvideo from "../../assets/qqq.mp4";
 export default function SignUp() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -47,6 +47,10 @@ export default function SignUp() {
 
   return (
     <div className="signup">
+      <video autoPlay loop muted playsInline className="background-video">
+              <source src={backvideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
       <div className="signup-container">
         <form onSubmit={handleSubmit}>
           <h3>Sign up</h3>
@@ -56,7 +60,7 @@ export default function SignUp() {
           )}
 
           <div className="signup-box">
-            <label>First name</label>
+            <label style={{ color: "white"}}>First name</label>
             <input
               type="text"
               className="form-control"
@@ -68,7 +72,7 @@ export default function SignUp() {
           </div>
 
           <div className="signup-box">
-            <label>Last name</label>
+            <label  style={{ color: "white"}}>Last name</label>
             <input
               type="text"
               className="form-control"
@@ -80,7 +84,7 @@ export default function SignUp() {
           </div>
 
           <div className="signup-box">
-            <label>Email address</label>
+            <label  style={{ color: "white"}}>Email address</label>
             <input
               type="email"
               className="form-control"
@@ -92,7 +96,7 @@ export default function SignUp() {
           </div>
 
           <div className="signup-box">
-            <label>Password</label>
+            <label  style={{ color: "white"}}>Password</label>
             <input
               type="password"
               className="form-control"
@@ -108,7 +112,7 @@ export default function SignUp() {
               Register
             </button>
           </div>
-          <p className="signup-text">
+          <p className="signup-text"  style={{ color: "white"}}>
             Already have an account <a href="/Login">Login</a>
           </p>
         </form>

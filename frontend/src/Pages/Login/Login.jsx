@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { validateLogin } from "../../Validation/LoginValidation";
 import "./Login.css";
+import backvideo from "../../assets/qqq.mp4";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -51,12 +52,17 @@ export default function Login() {
 
   return (
     <div className="login">
+       <video autoPlay loop muted playsInline className="background-video">
+        <source src={backvideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div className="log-container">
         <form onSubmit={handleSubmit}>
-          <h3>Log in</h3>
+          <h3 className="loginheader">Log in</h3>
 
           <div className="log-box">
-            <label>Email address</label>
+            <label className="emailcolor">Email address</label>
             <input
               type="email"
               className="form-control"
@@ -68,7 +74,7 @@ export default function Login() {
           </div>
 
           <div className="log-box">
-            <label>Password</label>
+            <label className="emailcolor">Password</label>
             <input
               type="password"
               className="form-control"
@@ -88,7 +94,7 @@ export default function Login() {
          
           {loginError && <p className="error">{loginError}</p>}
 
-          <p className="not-register">
+          <p className="not-register" >
             If you don't have an account <a href="/SignUp">Sign up?</a>
           </p>
         </form>

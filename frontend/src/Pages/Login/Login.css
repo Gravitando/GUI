@@ -1,31 +1,46 @@
 /* General styling for the login page */
 .login {
-  background-image: url(../assets/pic13.jpg);
-   background-size: cover;
-   width: 100vw;
-   height: 100vh;
-   margin: 0;
-   padding: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
  
- 
- .log-container{
-   background-color: #ffffffd0;
+ .log-container {
+   background: rgba(255, 255, 255, 0.192); /* Light transparent white */
    padding: 30px;
    border-radius: 10px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
    width: 400px;
    max-width: 90%;
- }
+   backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+   -webkit-backdrop-filter: blur(10px); /* Safari support */
+   border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for depth */
+}
+
  
  h3 {
    text-align: center;
    margin-bottom: 20px;
    font-size: 1.8rem;
-   color: #0073e6;
+   color: #0073e6b2;
    font-weight: bold;
  }
  
@@ -86,6 +101,7 @@
    text-align: center;
    margin-top: 20px;
    font-size: 0.9rem;
+   color:white;
  }
  
  .not-register a {
@@ -112,6 +128,7 @@
    .log-buttun1 {
      padding: 10px 15px;
      font-size: 0.9rem;
+      
    }
  }
  .error {
@@ -124,4 +141,10 @@
   color: green;
   font-weight: bold;
   margin-bottom: 10px;
+}
+.emailcolor{
+  color:white;
+}
+.loginheader{
+  color:#0073e6;
 }
