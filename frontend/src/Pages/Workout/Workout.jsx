@@ -5,6 +5,7 @@ import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 
 
+
 function Workout() {
   const [workoutPlan, setWorkoutPlan] = useState({workoutType:"strength", date:"", startTime:"", duration:0});
   const [workouts, setWorkouts] = useState([]);
@@ -64,7 +65,7 @@ function Workout() {
        <p>Choose a category that best suits the workout you're searching for<br /> Once in the category, 
         use the sort and filter options to find the right workout for your experience and goals.</p>
  <div className="workout-grid">
-    <Link to="/Workout/StrengthTraining" className="workout-item">
+    <Link to="/Workout/Beginner" className="workout-item">
       <img src="public\Bigginer.webp" alt="Strength Training" />
       <span>Beginner</span>
     </Link>
@@ -74,52 +75,52 @@ function Workout() {
       <span>Cardio</span>
     </Link>
 
-    <Link to="/Workout/Yoga" className="workout-item">
-      <img src="public\fatloss.jpg" alt="Yoga" />
+    <Link to="/Workout/FatLoss" className="workout-item">
+      <img src="public\fatloss.jpg" alt="FatLoss" />
       <span>Fat Loss</span>
     </Link>
 
-    <Link to="/Workout/HIIT" className="workout-item">
+    <Link to="/Workout/IncreaseStrength" className="workout-item">
       <img src="public\increasestrength.jpg" alt="HIIT" />
       <span>Increase Strength</span>
     </Link>
 
-    <Link to="/Workout/Flexibility" className="workout-item">
+    <Link to="/Workout/AbsWorkout" className="workout-item">
       <img src="public/abworkouts.jpg" alt="Flexibility" />
       <span>Abs Workouts</span>
     </Link>
 
-    <Link to="/Workout/Endurance" className="workout-item">
+    <Link to="/Workout/ChestWorkout" className="workout-item">
       <img src="public/chestworkouts.jpg" alt="Endurance" />
       <span>Chest Workouts</span>
     </Link>
 
-    <Link to="/Workout/Core" className="workout-item">
+    <Link to="/Workout/BackWorkout" className="workout-item">
       <img src="public/backworkouts.jpg" alt="Core Workouts" />
       <span>Back Workouts</span>
     </Link>
 
-    <Link to="/Workout/FullBody" className="workout-item">
+    <Link to="/Workout/BicepWorkout" className="workout-item">
       <img src="public\bicepworkouts.jpg" alt="Full Body" />
       <span>Bicep Workouts</span>
     </Link>
 
-    <Link to="/Workout/Shoulder" className="workout-item">
+    <Link to="/Workout/ShoulderWorkout" className="workout-item">
       <img src="public\shoulderworkout.webp" alt="Shoulder" />
       <span>Shoulder Workouts</span>
     </Link>
 
-    <Link to="/Workout/leg" className="workout-item">
+    <Link to="/Workout/LegWorkout" className="workout-item">
       <img src="public\legworkouts.webp" alt="leg" />
       <span>Leg Workouts</span>
     </Link>
 
-    <Link to="/Workout/Tricep" className="workout-item">
+    <Link to="/Workout/TricepWorkout" className="workout-item">
       <img src="public/backworkouts.jpg" alt="Tricep" />
       <span>Tricep Workouts</span>
     </Link>
 
-    <Link to="/Workout/Glute" className="workout-item">
+    <Link to="/Workout/GluteWorkout" className="workout-item">
       <img src="public\gluteworkouts.jpg" alt="Glute" />
       <span>Glute Workouts</span>
     </Link>
@@ -133,39 +134,46 @@ function Workout() {
   <div className="workout-trends-list">
     {/* Workout 1 */}
     <div className="workout-card">
-      <img src="src/assets/strength.webp" alt="Strength & Conditioning Plan" className="workout-image" />
+      <img src="src\assets\card01.jpg" alt="Strength & Conditioning Plan" className="workout-image" />
       <h3>Strength & Conditioning Plan</h3>
-      <p>A 12-week plan focused on improving full-body strength and endurance with progressive overload techniques.</p>
+      <p>This 12-week plan enhances full-body strength and endurance using progressive overload techniques. It incorporates resistance training, compound movements, and cardio, gradually
+         increasing intensity to maximize muscle growth, stamina, 
+         and overall fitness performance.</p>
     </div>
     {/* Workout 2 */}
     <div className="workout-card">
-      <img src="src/assets/cardio.webp" alt="High-Intensity Cardio Routine" className="workout-image" />
+      <img src="src\assets\card02.webp" alt="High-Intensity Cardio Routine" className="workout-image" />
       <h3>High-Intensity Cardio Routine</h3>
-      <p>This 6-week routine combines sprint intervals and plyometric exercises for maximum fat burn and stamina boost.</p>
+      <p>This 6-week routine blends sprint intervals and plyometric exercises to maximize fat burn and enhance stamina. It progressively intensifies, 
+        improving speed, power, and endurance for optimal athletic performance and conditioning.</p>
     </div>
     {/* Workout 3 */}
     <div className="workout-card">
-      <img src="src/assets/yoga.webp" alt="Yoga for Mobility & Recovery" className="workout-image" />
+      <img src="src\assets\card03.webp" alt="Yoga for Mobility & Recovery" className="workout-image" />
       <h3>Yoga for Mobility & Recovery</h3>
-      <p>Enhance flexibility and reduce muscle stiffness with this structured 8-week yoga program designed for athletes.</p>
+      <p>This structured 8-week yoga program helps athletes enhance flexibility, improve mobility, and reduce muscle stiffness. It incorporates dynamic stretches, 
+        deep breathing, and recovery-focused poses to optimize performance and prevent injuries.</p>
     </div>
     {/* Workout 4 */}
     <div className="workout-card">
-      <img src="src/assets/bodyweight.webp" alt="Bodyweight Strength Program" className="workout-image" />
+      <img src="src\assets\card04.jpg" alt="Bodyweight Strength Program" className="workout-image" />
       <h3>Bodyweight Strength Program</h3>
-      <p>A 4-week calisthenics-based workout plan to build strength and endurance without any gym equipment.</p>
+      <p>This 4-week calisthenics-based workout plan builds strength and endurance using bodyweight exercises. It progressively challenges muscles with push-ups, squats, 
+        and core movements, requiring no gym equipment for effective full-body training.</p>
     </div>
     {/* Workout 5 */}
     <div className="workout-card">
-      <img src="src/assets/muscle.webp" alt="Muscle Growth Blueprint" className="workout-image" />
+      <img src="src\assets\card05.jpg" alt="Muscle Growth Blueprint" className="workout-image" />
       <h3>Muscle Growth Blueprint</h3>
-      <p>A hypertrophy-focused 10-week training program to help you gain lean muscle mass with structured progression.</p>
+      <p>This 10-week hypertrophy-focused training program is designed to help you gain lean muscle mass through structured progression. 
+        It incorporates strategic volume, controlled tempo, and progressive overload for optimal muscle growth.</p>
     </div>
     {/* Workout 6 */}
     <div className="workout-card">
-      <img src="src/assets/endurance.webp" alt="Endurance Training Guide" className="workout-image" />
+      <img src="src\assets\card06.jpg" alt="Endurance Training Guide" className="workout-image" />
       <h3>Endurance Training Guide</h3>
-      <p>Improve your stamina with this endurance-based 8-week program designed for runners and athletes.</p>
+      <p>This 8-week endurance-based program enhances stamina for runners and athletes through structured cardio, interval training, and strength workouts. It progressively builds 
+        aerobic capacity, speed, and overall performance for sustained athletic improvement.</p>
     </div>
   </div>
 </div>

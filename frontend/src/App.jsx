@@ -16,6 +16,18 @@ import Snacks from './Pages/snacks/snacks';
 import Vegetarian from './Pages/Vegetarian/Vegetarian';
 import Breakfast from './Pages/Breakfast/Breakfast';
 import Lunch from './Pages/Lunch/Lunch';
+import Beginner from './Pages/Beginner/Beginner';
+import Cardio from './Pages/Cardio/Cardio';
+import FatLoss from './Pages/FatLoss/FatLoss';
+import IncreaseStrength from './Pages/IncreaseStrength/IncreaseStrength';
+import AbsWorkout from './Pages/AbsWorkout/AbsWorkout';
+import ChestWorkout from './Pages/ChestWorkout/ChestWorkout';
+import BackWorkout from './Pages/BackWorkout/BackWorkout';
+import BicepWorkout from './Pages/BicepWorkout/BicepWorkout';
+import ShoulderWorkout from './Pages/ShoulderWorkout/ShoulderWorkout';
+import LegWorkout from './Pages/LegWorkout/LegWorkout';
+import TricepWorkout from './Pages/TricepWorkout/TricepWorkout';
+import GluteWorkout from './Pages/GluteWorkout/GluteWorkout';
 import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
@@ -38,6 +50,19 @@ function App() {
         <Route path="/DietPlan/Vegetarian" element={<Vegetarian />} />
         <Route path="/DietPlan/Breakfast" element={<Breakfast />} />
         <Route path="/DietPlan/Lunch" element={<Lunch />} />
+        <Route path="/Workout/Beginner" element={<Beginner />} />
+        <Route path="/Workout/Cardio" element={<Cardio />} />
+        <Route path="/Workout/FatLoss" element={<FatLoss />} />
+        <Route path="/Workout/IncreaseStrength" element={<IncreaseStrength />} />
+        <Route path="/Workout/AbsWorkout" element={<AbsWorkout />} />
+        <Route path="/Workout/AbsWorkout" element={<AbsWorkout />} />
+        <Route path="/Workout/ChestWorkout" element={<ChestWorkout />} />
+        <Route path="/Workout/BackWorkout" element={<BackWorkout />} />
+        <Route path="/Workout/BicepWorkout" element={<BicepWorkout />} />
+        <Route path="/Workout/ShoulderWorkout" element={<ShoulderWorkout />} />
+        <Route path="/Workout/LegWorkout" element={<LegWorkout />} />
+        <Route path="/Workout/TricepWorkout" element={<TricepWorkout />} />
+        <Route path="/Workout/GluteWorkout" element={<GluteWorkout />} />
         <Route path="/SignUp" element={<SignUp />} />
       </Routes>
       <Footer />

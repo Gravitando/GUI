@@ -71,39 +71,45 @@ function DietPlan() {
   <div className="meal-plans-list">
     {/* Meal 1 */}
     <div className="meal-card">
-      <img src="src/assets/meal1.jpg" alt="High Protein Meal" className="meal-image" />
+      <img src="src\assets\meal01.jpg" alt="High Protein Meal" className="meal-image" />
       <h3>High Protein Meal</h3>
-      <p>A perfect meal plan rich in proteins, designed for muscle building and recovery.</p>
+      <p>This protein-rich meal plan supports muscle building and recovery with balanced nutrients. It includes lean meats, eggs, dairy, 
+        legumes, and healthy fats, ensuring optimal muscle growth, repair, and sustained energy levels.</p>
     </div>
     {/* Meal 2 */}
     <div className="meal-card">
-      <img src="src/assets/meal2.jpg" alt="Low Carb Meal" className="meal-image" />
+      <img src="src\assets\meal02.jpg" alt="Low Carb Meal" className="meal-image" />
       <h3>Low Carb Meal</h3>
-      <p>Balanced meals with reduced carbs, perfect for weight loss and maintaining energy levels.</p>
+      <p>This balanced meal plan features reduced carbs, ideal for weight loss while maintaining energy levels. It includes lean proteins, 
+        healthy fats, and fiber-rich vegetables to support metabolism, satiety, and overall well-being.</p>
     </div>
     {/* Meal 3 */}
     <div className="meal-card">
-      <img src="src/assets/meal3.jpg" alt="Vegan Meal Plan" className="meal-image" />
+      <img src="src\assets\meal03.jpg" alt="Vegan Meal Plan" className="meal-image" />
       <h3>Vegan Meal Plan</h3>
-      <p>Delicious plant-based meals full of essential nutrients and proteins.</p>
+      <p>These delicious plant-based meals are packed with essential nutrients and proteins, featuring legumes, nuts, seeds, and fresh vegetables. 
+        They support muscle growth, energy levels, and overall well-being while being flavorful and satisfying.</p>
     </div>
     {/* Meal 4 */}
     <div className="meal-card">
-      <img src="src/assets/meal4.jpg" alt="Keto Diet Meal" className="meal-image" />
+      <img src="src\assets\meal04.jpg" alt="Keto Diet Meal" className="meal-image" />
       <h3>Keto Diet Meal</h3>
-      <p>Low-carb, high-fat meals designed to keep you in ketosis for maximum fat burning.</p>
+      <p>These low-carb, high-fat meals are designed to keep you in ketosis, maximizing fat burning while sustaining energy levels. They include healthy fats, 
+        moderate protein, and nutrient-dense ingredients for optimal metabolic efficiency.</p>
     </div>
     {/* Meal 5 */}
     <div className="meal-card">
-      <img src="src/assets/meal5.jpg" alt="Balanced Diet" className="meal-image" />
+      <img src="src/assets/meal05.jpg" alt="Balanced Diet" className="meal-image" />
       <h3>Balanced Diet</h3>
-      <p>A well-balanced diet with the right mix of protein, carbs, and fats for overall health.</p>
+      <p>This well-balanced diet provides the perfect mix of protein, carbs, and fats to support overall health. It includes lean proteins, whole grains, healthy fats,
+         and a variety of fruits and vegetables for energy, muscle repair, and optimal bodily function..</p>
     </div>
     {/* Meal 6 */}
     <div className="meal-card">
-      <img src="src/assets/meal6.jpg" alt="Mediterranean Diet" className="meal-image" />
+      <img src="src\assets\meal06.jpg" alt="Mediterranean Diet" className="meal-image" />
       <h3>Mediterranean Diet</h3>
-      <p>A heart-healthy meal plan inspired by Mediterranean cuisine, rich in healthy fats.</p>
+      <p>This heart-healthy meal plan, inspired by Mediterranean cuisine, is rich in healthy fats like olive oil, nuts, and seeds. It includes fresh vegetables, 
+        whole grains, and lean proteins, promoting cardiovascular health and overall wellness.</p>
     </div>
   </div>
 </div>
